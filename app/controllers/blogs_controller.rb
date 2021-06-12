@@ -3,6 +3,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @blog = Blog.find(params[:id])
   end
 
   def new
@@ -10,6 +11,7 @@ class BlogsController < ApplicationController
   end
 
   def create
+    blog = Blog.new(blog_params)
   end
 
   def edit
